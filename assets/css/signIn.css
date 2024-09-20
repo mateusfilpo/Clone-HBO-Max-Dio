@@ -1,0 +1,504 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #020228;
+  --secondary-color: #ff00e5;
+  --tertiary-color: #b535f6;
+  --btn-bg-color-gradient: linear-gradient(45deg,
+      #9b34ef 0%,
+      #490cb0 20%,
+      transparent 50%);
+  --btn-link-bg-color: #fff;
+  --btn-link-color: #000;
+  --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+  --divider-bg-color: linear-gradient(90deg,
+      #5516ba,
+      rgba(255, 0, 229, 0.5) 80%);
+  --nav-bg-color: rgba(0, 0, 0, 0.3);
+  --text-color: #fff;
+  --link-color: #9e86ff;
+  --form-bg-color: rgba(211, 211, 211, 0.06);
+  --form-field-bg-color: rgba(0, 0, 0, 0.2);
+  --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+  --form-field-placeholder: rgba(255, 255, 255, 0.7);
+  --form-field-error: rgb(255, 76, 76);
+
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-color: #020228;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  nav {
+    background-color: var(--nav-bg-color);
+
+    width: 100%;
+    z-index: 1000;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav .logo {
+    width: 115px;
+    height: 15px;
+    margin-bottom: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+  }
+
+  nav button {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+
+  nav .entrar {
+    background: none;
+    border: none;
+  }
+
+  nav .assine-agora {
+    margin-left: 10px;
+    border: none;
+    width: 150px;
+    height: 28px;
+    border-radius: 28px;
+    background-color: #ff00e5;
+    transition: all, 800ms ease-in-out;
+  }
+
+  nav .assine-agora:hover {
+    background-color: white;
+    color: black;
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  main .container {
+    background-color: var(--form-bg-color);;
+    border-radius: 8px;
+    
+    width: 80%;
+    height: 75%;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main .container h2 {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  main .container .login {
+    margin-top: 20px;
+    width: 95%;
+    height: 82%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+  }
+
+  main .container .login span {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+
+  main .container .login input {
+    background: none;
+    border: var(--form-field-border);
+    border-radius: 8px;
+    width: 83%;
+    height: 45px;
+    font-size: 15px;
+    padding-left: 10px ;
+    margin-left: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+  }
+
+  main .container .login .email {
+    margin-top: 20px
+  }
+
+  main .container .login .senha {
+    margin-top: 20px;
+  }
+
+  main .container .login .botoes {
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+
+  main .container .login .botoes .entrar {
+    margin-top: -28px;
+    margin-left: -2px;
+    cursor: pointer;
+    color: white;
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    background-size: 250%;
+    background-position: left;
+    border: none;
+    width: 60%;
+    height: 90%;
+    padding: 10px; 
+    border-radius: 28px;
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: background-position 800ms ease-in-out, outline 800ms ease-in-out;
+  }
+
+  main .container .login .botoes .entrar:hover {
+    background-position: right; 
+    outline: 2px solid var(--secondary-color);
+  }
+
+  main .container .login .botoes .esqueceu-senha {
+    cursor: pointer;
+    color: var(--link-color);
+    font-family: "Raleway", sans-serif;
+    margin-left: -7px;
+    margin-top: 15px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  footer {
+    padding-bottom: 20px;
+    margin-top: 10px;
+    height: 60%;
+
+    font-family: "Raleway", sans-serif;
+    color: var(--link-color);
+    font-weight: 640;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .links {
+    font-family: "Raleway", sans-serif;
+    color: var(--link-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer .links span {
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: color 500ms ease-in-out;
+  }
+
+  footer .links span:hover {
+    color: white;
+  }
+
+  footer .links-direitos .direitos {
+    color: var(--link-color);
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  footer .social {
+    margin-top: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 45%;
+  }
+
+  footer .social img {
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #020228;
+    background-image: url('/assets/images/background-movies-series.png');
+    background-size: contain;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  nav {
+    background-color: var(--nav-bg-color);
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    box-sizing: border-box; 
+    z-index: 1000;
+  }
+  
+  nav button {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+
+  nav a {
+    text-decoration: none;
+  }
+
+  nav .logo {
+    width: 165px;
+    height: 25px;
+  }
+
+  nav .entrar {
+    background: none;
+    border: none;
+  }
+
+  nav .assine-agora {
+    margin-left: 10px;
+    border: none;
+    width: 150px;
+    height: 28px;
+    border-radius: 28px;
+    background-color: #ff00e5;
+    transition: all, 800ms ease-in-out;
+  }
+
+  nav .assine-agora:hover {
+    background-color: white;
+    color: black;
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  main .container {
+    background-color: var(--form-bg-color);;
+    border-radius: 8px;
+    
+    width: 750px;
+    height: 360px;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main .container h2 {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+
+  main .container .login {
+    margin-top: 20px;
+    width: 95%;
+    height: 82%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+  }
+
+  main .container .login span {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+
+  main .container .login input {
+    background: none;
+    border: var(--form-field-border);
+    border-radius: 8px;
+    width: 680px;
+    height: 45px;
+    font-size: 15px;
+    padding-left: 10px ;
+    margin-left: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+  }
+
+  main .container .login .email {
+    margin-top: 20px
+  }
+
+  main .container .login .senha {
+    margin-top: 20px;
+  }
+
+  main .container .login .botoes {
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+
+  main .container .login .botoes .entrar {
+    margin-top: -28px;
+    cursor: pointer;
+    color: white;
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    background-size: 250%;
+    background-position: left;
+    border: none;
+    width: 155px;
+    height: 45px;
+    padding: 10px; 
+    border-radius: 28px;
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: background-position 800ms ease-in-out, outline 800ms ease-in-out;
+  }
+
+  main .container .login .botoes .entrar:hover {
+    background-position: right; 
+    outline: 2px solid var(--secondary-color);
+  }
+
+  main .container .login .botoes .esqueceu-senha {
+    cursor: pointer;
+    color: var(--link-color);
+    font-family: "Raleway", sans-serif;
+    margin-left: 15px;
+    background: none;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  footer {
+    padding-bottom: 50px;
+    margin-top: -80px;
+    height: 120px;
+
+    font-family: "Raleway", sans-serif;
+    color: var(--link-color);
+    font-weight: 640;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  footer .links {
+    font-family: "Raleway", sans-serif;
+    color: var(--link-color);
+  }
+
+  footer .links span {
+    cursor: pointer;
+    margin-left: 25px;
+    transition: color 500ms ease-in-out;
+  }
+
+  footer .links span:hover {
+    color: white;
+  }
+
+  footer .links-direitos .direitos {
+    color: var(--link-color);
+    font-size: 8px;
+    font-weight: 500;
+  }
+
+  footer .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 20%;
+  }
+  
+  footer .social img {
+    cursor: pointer;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
